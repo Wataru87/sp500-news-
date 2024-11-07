@@ -3,17 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>S&P500 ニュース速報</title>
+    <!-- BootstrapのCSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- カスタムCSS -->
+    <style>
+        body {
+            background-color: #f0f8ff; /* 薄い青の背景色 */
+            color: #333;
+        }
+        h1 {
+            color: #0056b3; /* 濃い青 */
+        }
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #e6f2ff; /* 白と薄い青の交互行 */
+        }
+        .table-hover tbody tr:hover {
+            background-color: #d0e7ff; /* 行ホバーで少し濃い青 */
+        }
+        .table td, .table th {
+            vertical-align: middle;
+        }
+        .news-title a {
+            color: #0056b3; /* タイトルリンクの色 */
+            text-decoration: none;
+        }
+        .news-title a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 <div class="container mt-5">
     <h1 class="mb-4">S&P500 ニュース速報</h1>
-    <table class="table table-striped">
+    <table class="table table-striped table-hover">
         <thead>
             <tr>
-                <th>タイトル</th>
-                <th>媒体名</th>
                 <th>配信時間</th>
+                <th>媒体</th>
+                <th>見出し</th>
             </tr>
         </thead>
         <tbody id="news-table">
